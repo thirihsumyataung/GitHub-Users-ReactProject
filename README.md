@@ -1,4 +1,4 @@
-# GitHub user 
+# GitHub user : React Project
 
 ```
   npm install @auth0/auth0-react
