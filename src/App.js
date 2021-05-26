@@ -6,7 +6,7 @@ function App() {
   return (
     <Router>
       <Switch>
-         <Route path="/" exact={true}>
+          <Route path="/" exact={true}>
           <Dashboard></Dashboard>
       </Route>
       <Route path="/login">
@@ -15,7 +15,7 @@ function App() {
       <Route path="*">
         <Error></Error>
       </Route>
-      </Switch>   
+      </Switch>  
     </Router>   
   );
 }
