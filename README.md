@@ -59,3 +59,7 @@ Fushion Charts
 - Make an account at Auth0 https://auth0.com/ 
 - Application -> create an Application -> Choose Single Web App -> React 
 - [Auth0 React SDK](https://auth0.com/docs/quickstart/spa/react)
+  
+```
+    "build": "CI= react-scripts build",
+```
