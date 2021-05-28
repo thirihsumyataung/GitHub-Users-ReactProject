@@ -44,7 +44,7 @@
 - get user 
 [user] (https://api.github.com/user)
 - user
- [repos] (https://api.github.com/users/john-smilga/repos?)
+ [repos] (https://api.github.com/users/john-smilga/repos?per_page=100)
 - followers 
 [followers](https://api.github.com/users/john-smilga/followers)
 - rate limit 
@@ -53,3 +53,9 @@
 Fushion Charts
 [react fushionchart](https://www.fusioncharts.com/dev/getting-started/react/your-first-chart-using-react)
 [configurations of the chart](https://www.fusioncharts.com/dev/chart-guide/list-of-charts)
+
+### Authorization 
+
+- Make an account at Auth0 https://auth0.com/ 
+- Application -> create an Application -> Choose Single Web App -> React 
+- [Auth0 React SDK](https://auth0.com/docs/quickstart/spa/react)

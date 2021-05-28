@@ -6,11 +6,22 @@ import * as serviceWorker from './serviceWorker';
 import { GithubProvider } from './context/context';
 import { Auth0Provider } from '@auth0/auth0-react';
 
+// 1.  Domain 
+
+// 2.  Client ID 
 ReactDOM.render(
   <React.StrictMode>
-    <GithubProvider>
+     <Auth0Provider
+    domain="yingtee.us.auth0.com"
+    clientId="qHWYnUMLWX6xlsNSlI3ntXS2QqOLUVjT"
+      redirectUri={window.location.origin}
+      cacheLocation ='localstorage'
+  ><GithubProvider>
       <App />
-    </GithubProvider>    
+    </GithubProvider>
+    
+  </Auth0Provider>
+        
   </React.StrictMode>,
   document.getElementById('root')
 );

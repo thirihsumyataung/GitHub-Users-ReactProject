@@ -29,7 +29,26 @@ const GithubProvider = ({ children }) => {
         console.log(response); 
         if (response) {
             setGithubUser(response.data);
-            
+            const { login, followers_url } = response.data;
+            await Promise.allSettled([axios(`${rootUrl}/users/${login}/repos?per_page=100`), axios(`${followers_url}?per_page=100`)]).then((results) => {
+                console.log(results); 
+                const [repos, followers] = results;
+                const status = 'fulfilled';
+                if (repos.status === status) {
+                    setRepos(repos.value.data); 
+                }
+                if (followers.status === status) {
+                    setFollowers(followers.value.data); 
+                }
+            }
+            );
+            //repos 
+            //https://api.github.com/users/john-smilga/repos?per_page=100
+        // await   .then(response => setRepos(response.data));
+             // followers 
+            // https://api.github.com/users/john-smilga/followers
+        // await   .then(response => setFollowers(response.data));
+            //either we will pass it in assign of variable or you can pass directly in the array           
         }
         else {
             toggleError(true, `Sorry: user with ${user} name is not found. `); 
@@ -48,7 +67,6 @@ const GithubProvider = ({ children }) => {
                 // throw an error   
                 toggleError(true, 'Sorry, you have exceded your hourly rate limit!'); 
             }
-
             console.log(data);
             console.log(remaining); 
         }).catch((err) => console.log(err)); 
