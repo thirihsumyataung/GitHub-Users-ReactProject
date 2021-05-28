@@ -14,7 +14,7 @@ const Navbar = () => {
      Logout
    </button>) :   <button onClick={loginWithRedirect}>
       Login
-   </button>   }
+   </button>  }
     
    
   </Wrapper>;
