@@ -66,4 +66,4 @@ Fushion Charts
     "build": "CI= react-scripts build",
 ```
   
-- In public folder, create _redirects file and /* /index.html 200 
+- In public folder, create _redirects file and add  /* /index.html 200 
