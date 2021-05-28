@@ -60,6 +60,10 @@ Fushion Charts
 - Application -> create an Application -> Choose Single Web App -> React 
 - [Auth0 React SDK](https://auth0.com/docs/quickstart/spa/react)
   
+- Note: When you deploy it on netlify , don't forget to update "build" in package.json 
+  
 ```
     "build": "CI= react-scripts build",
 ```
+  
+- In public folder, create _redirects file and /* /index.html 200 
