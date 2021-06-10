@@ -70,5 +70,3 @@ Fushion Charts
   
 - In public folder, create _redirects file and add  /* /index.html 200 
   
-- Deployed on Netlify:
- [![Netlify Status](https://api.netlify.com/api/v1/badges/9411741c-7079-45d4-9521-18c7c48f2b7f/deploy-status)](https://app.netlify.com/sites/redux-shopping-cart-by-thiriaung/deploys) https://redux-shopping-cart-by-thiriaung.netlify.app/
